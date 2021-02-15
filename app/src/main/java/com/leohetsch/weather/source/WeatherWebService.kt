@@ -1,8 +1,8 @@
-package com.leohetsch.weather
+package com.leohetsch.weather.source
 
+import com.leohetsch.weather.model.Weather
 import retrofit2.http.GET
 import retrofit2.http.Query
-import javax.inject.Inject
 
 interface WeatherWebService {
     @GET("weather")

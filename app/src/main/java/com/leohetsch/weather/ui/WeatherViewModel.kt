@@ -1,7 +1,8 @@
-package com.leohetsch.weather
+package com.leohetsch.weather.ui
 
 import androidx.lifecycle.*
-import dagger.assisted.Assisted
+import com.leohetsch.weather.model.Weather
+import com.leohetsch.weather.source.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

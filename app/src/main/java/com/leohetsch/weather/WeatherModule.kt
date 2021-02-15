@@ -1,13 +1,13 @@
 package com.leohetsch.weather
 
+import com.leohetsch.weather.source.WeatherCache
+import com.leohetsch.weather.source.WeatherWebService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityRetainedComponent
-import okhttp3.HttpUrl
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -43,4 +43,7 @@ object WeatherModule {
     @Provides
     fun providesWeatherService(retrofit: Retrofit): WeatherWebService =
         retrofit.create(WeatherWebService::class.java)
+
+    @Provides
+    fun providesWeatherCache() = WeatherCache()
 }
